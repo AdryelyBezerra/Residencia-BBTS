@@ -86,6 +86,16 @@ display: flex;
 justify-content: center; 
 align-items: center; 
 }
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border: 0;
+}
+
 .search {
 display: flex;
 width: 400px;
@@ -94,18 +104,18 @@ border: 1px solid #d0d0d094;
 align-items: center; 
 overflow: hidden;
 }
-.search input[type="text"]{
+.search input[type="search"]{
 flex: 1; 
 border: none; 
 outline: none;
-padding: 10px;
-height: 18.4px; /* Esclarecendo a altura do input */
-width: 194.4px; /* Esclarecendo a largura do input */
+padding: 19px;
+height: 1px; /* Esclarecendo a altura do input */
+width: 194px; /* Esclarecendo a largura do input */
 font-size: 16px;
 border-top-right-radius: 0; 
 border-bottom-right-radius: 0; 
 }
-.search button[type="submit"]{
+.search button{
 border: none;
 background-color: #e8e8e8; 
 color: #494949;
@@ -121,8 +131,9 @@ border-left: none;
 border-top-left-radius: 0;
 border-bottom-left-radius: 0; 
 }
-.search button .material-symbols-outlined {
-font-size: 20px; 
+.search button img {
+width: 20px; /* Exemplo para ajustar o tamanho do SVG */
+height: 20px;
 }
 h1 {
 text-align: left;

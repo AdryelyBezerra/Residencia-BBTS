@@ -1,32 +1,114 @@
-//Pesquisa Tela Inicial 
-  document.addEventListener('DOMContentLoaded', function() {
-    const searchBtn = document.getElementById('searchBtn');
-    const searchInput = document.getElementById('searchInput');
-    const vagas = document.querySelectorAll('.vaga');
+//Pesquisa Tela Inicial Administrador
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInputs = document.querySelectorAll('input[type="search"]');
+  const searchButtons = document.querySelectorAll('.search button');
+  const contentContainers = document.querySelectorAll('.content');
 
-    function realizarBusca() {
-        const termo = searchInput.value.toLowerCase();
+  // Adiciona uma mensagem "nenhuma vaga encontrada" em cada bloco .content
+  contentContainers.forEach(container => {
+    const mensagem = document.createElement('p');
+    mensagem.classList.add('mensagem-nenhuma-vaga');
+    mensagem.textContent = 'Nenhuma vaga encontrada :(';
+    mensagem.style.display = 'none';
+    mensagem.style.fontStyle = 'italic';
+    mensagem.style.color = '#fff';
+    mensagem.style.marginTop = '20px';
+    container.appendChild(mensagem);
+  });
 
-        vagas.forEach(card => {
-            const titulo = card.querySelector('h2').textContent.toLowerCase();
-            if (titulo.includes(termo)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-    searchBtn.addEventListener('click', function () {
-        realizarBusca();
+  function realizarBusca(termo, containerIndex = 0) {
+    const termoLimpo = termo.trim().toLowerCase();
+    const container = contentContainers[containerIndex];
+    const vagas = container.querySelectorAll('.vaga');
+    const mensagem = container.querySelector('.mensagem-nenhuma-vaga');
+    let encontrouAlguma = false;
+
+    vagas.forEach(vaga => {
+      const texto = vaga.innerText.toLowerCase();
+      if (termoLimpo === '' || texto.includes(termoLimpo)) {
+        vaga.style.display = 'block';
+        encontrouAlguma = true;
+      } else {
+        vaga.style.display = 'none';
+      }
     });
-    // Pressionar Enter
-    searchInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            event.preventDefault(); 
-            realizarBusca();
-        }
+
+    mensagem.style.display = encontrouAlguma ? 'none' : 'block';
+  }
+
+  searchButtons.forEach((btn, i) => {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      const termo = searchInputs[i].value;
+      realizarBusca(termo, i);
     });
+  });
+
+  searchInputs.forEach((input, i) => {
+    input.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        realizarBusca(input.value, i);
+      }
+    });
+
+    input.addEventListener('input', function () {
+      realizarBusca(input.value, i);
+    });
+  });
 });
+
+// Funcionalidades tela de vagas solicitadas
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInput = document.querySelector('.svagaAdm input[type="search"]');
+  const searchButton = document.querySelector('.svagaAdm .search button');
+  const container = document.querySelector('.analise-container');
+  const vagas = container.querySelectorAll('.analise-box');
+
+  // Cria e adiciona a mensagem de "nenhuma vaga encontrada"
+  const mensagem = document.createElement('p');
+  mensagem.classList.add('mensagem-nenhuma-vaga');
+  mensagem.textContent = 'Nenhuma vaga encontrada :(';
+  mensagem.style.display = 'none';
+  mensagem.style.fontStyle = 'italic';
+  mensagem.style.color = 'black';
+  mensagem.style.marginTop = '20px';
+  container.appendChild(mensagem);
+
+  function realizarBusca(termo) {
+    const termoLimpo = termo.trim().toLowerCase();
+    let encontrouAlguma = false;
+
+    vagas.forEach(vaga => {
+      const texto = vaga.innerText.toLowerCase();
+      if (termoLimpo === '' || texto.includes(termoLimpo)) {
+        vaga.style.display = 'block';
+        encontrouAlguma = true;
+      } else {
+        vaga.style.display = 'none';
+      }
+    });
+
+    mensagem.style.display = encontrouAlguma ? 'none' : 'block';
+  }
+
+  searchButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    realizarBusca(searchInput.value);
+  });
+
+  searchInput.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      realizarBusca(searchInput.value);
+    }
+  });
+
+  searchInput.addEventListener('input', function () {
+    realizarBusca(searchInput.value);
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     // Seleção das telas
     const telaUsuario = document.querySelector('.tela-admin');

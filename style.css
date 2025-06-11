@@ -1,146 +1,147 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif; /* Especificando a fonte padrão para não dar erro */
-    height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Especificando a fonte padrão para não dar erro */
+  height: 100%;
 }
 /*LOGIN*/
 .login {
-background-color: #4353FF; 
-font-family: sans-serif;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100vh;
+  background-color: #4353ff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.logobb{
-width: 100%;
-background-color: #FFEB00;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px 0;
-position: fixed;
-top: 0;
-left: 0;
-z-index: 1000;
+.logobb {
+  width: 100%;
+  background-color: #ffeb00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-.logobb img{
-height: 120px;
+.logobb img {
+  height: 120px;
 }
 select {
-padding: 10px 16px;
-border-radius: 8px;
-border: none;
-font-size: 16px;
-appearance: none;
-background-color: white;
-background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 50 L70 110 L130 50' stroke='%23000' stroke-width='20' fill='none'/%3E%3C/svg%3E");
-background-repeat: no-repeat;
-background-position: right 10px center;
-background-size: 12px;
-width: 250px;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 50 L70 110 L130 50' stroke='%23000' stroke-width='20' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .input-container {
-display: flex;
-align-items: center;
-margin-top: 30px;
-border-bottom: 2px solid white;
-width: 250px;
-padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  border-bottom: 2px solid white;
+  width: 250px;
+  padding-bottom: 5px;
 }
 .input-container .icon {
-font-size: 18px;
-margin-right: 8px;
-display: flex;
-align-items: center;
+  font-size: 18px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
 }
 .input-container input {
-border: none;
-outline: none;
-background-color: transparent;
-color: white !important;
-font-size: 16px;
-width: 100%;
-font-family: sans-serif;
-flex-grow: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white !important;
+  font-size: 16px;
+  width: 100%;
+  font-family: sans-serif;
+  flex-grow: 1;
 }
-.input-container input::placeholder{
-color: white;
-opacity: 1;
+.input-container input::placeholder {
+  color: white;
+  opacity: 1;
 }
-.link-direita{
-width: 250px;
-text-align: right;
-margin-top: 10px;
+.link-direita {
+  width: 250px;
+  text-align: right;
+  margin-top: 10px;
 }
-.link-direita a{
-color: white;
-text-decoration: underline;
-font-size: 14px;
-font-family: sans-serif;
+.link-direita a {
+  color: white;
+  text-decoration: underline;
+  font-size: 14px;
+  font-family: sans-serif;
 }
-button{
-margin-top: 20px;
-width: 250px;
-padding: 12px;
-border: none;
-border-radius: 8px;
-background-color: white;
-color: black;
-font-size: 16px;
-font-weight: bold;
-cursor: pointer;
-transition: background-color 0.3s ease;
+button {
+  margin-top: 20px;
+  width: 250px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-button:hover{
-background-color: #FCFB30;
+button:hover {
+  background-color: #fcfb30;
 }
-.tela-usuario{
-    background-color: #465EFF;
-    min-height: 100vh;
+.tela-usuario {
+  background-color: #465eff;
+  min-height: 100vh;
 }
 /*NAVBAR*/
 .navbar {
-background-color: #465EFF;
-padding: 1rem 2rem;
-color: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  background-color: #465eff;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.nav-right{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .links {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 .navbar a {
-color: white;
-text-decoration: none;
-margin: 0 1rem;
-cursor: pointer;
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  cursor: pointer;
 }
 .navbar a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 .user-icon {
-    flex: 1;
-    display: flex;
-    font-size: 24px;
-    cursor: pointer;
+  flex: 1;
+  display: flex;
+  font-size: 24px;
+  cursor: pointer;
 }
 .user-icon:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
-.user-menu{
-    position: relative;
+.user-menu {
+  position: relative;
 }
 .dropdown-menu {
   position: absolute;
@@ -170,399 +171,412 @@ text-decoration: underline;
 }
 /*TELA INICIAL*/
 .content {
-background-color: #465EFF;
-padding: 2rem;
-text-align: center;
+  background-color: #465eff;
+  padding: 2rem;
+  text-align: center;
 }
 .sfundo {
-background-color: #FCFB30;
-height: 70px;
-display: flex; 
-justify-content: center; 
-align-items: center; 
+  background-color: #fcfb30;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .visually-hidden {
-position: absolute;
-width: 1px;
-height: 1px;
-overflow: hidden;
-clip: rect(0, 0, 0, 0);
-white-space: nowrap;
-border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .search {
-display: flex;
-width: 400px;
-border-radius: 30px;
-border: 1px solid #d0d0d094; 
-align-items: center; 
-overflow: hidden;
+  display: flex;
+  width: 400px;
+  border-radius: 30px;
+  border: 1px solid #d0d0d094;
+  align-items: center;
+  overflow: hidden;
 }
-.search input[type="search"]{
-flex: 1; 
-border: none; 
-outline: none;
-padding: 19px;
-height: 1px; /* Esclarecendo a altura do input */
-width: 194px; /* Esclarecendo a largura do input */
-font-size: 16px;
-border-top-right-radius: 0; 
-border-bottom-right-radius: 0; 
+.search input[type="search"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 19px;
+  height: 1px; /* Esclarecendo a altura do input */
+  width: 194px; /* Esclarecendo a largura do input */
+  font-size: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
-.search button{
-border: none;
-background-color: #e8e8e8; 
-color: #494949;
-margin-top: 0px;
-padding: 10px 15px;
-height: 40px; /* Esclarecendo a altura do botão */
-width: 50px;  /* Esclarecendo a largura do botão */
-cursor: pointer;
-display: flex; 
-justify-content: center;
-align-items: center;
-border-left: none; 
-border-top-left-radius: 0;
-border-bottom-left-radius: 0; 
+.search button {
+  border: none;
+  background-color: #e8e8e8;
+  color: #494949;
+  margin-top: 0px;
+  padding: 10px 15px;
+  height: 40px; /* Esclarecendo a altura do botão */
+  width: 50px; /* Esclarecendo a largura do botão */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .search button img {
-width: 20px; /* Exemplo para ajustar o tamanho do SVG */
-height: 20px;
+  width: 20px; /* Exemplo para ajustar o tamanho do SVG */
+  height: 20px;
 }
 h1 {
-text-align: left;
-color: white;
+  text-align: left;
+  color: white;
 }
 .vaga {
-background-color: white;
-padding: 1px;
-margin: 20px;
-border-radius: 30px;
-cursor: pointer; 
-}
-.vaga:hover{
-    transform: scale(1.02);
-}
-/*DESCRIÇÃO*/
-.box-vaga{
-    display: flex;
-}
-.box-descricao {
-    display: none; /* Esconde a descrição por padrão */
-    background-color: white;
-    margin: 20px;
-    border-radius: 30px;
-    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
-}
-.box-vaga.ativo .box-descricao {
-    display: block; /* Exibe a descrição quando a vaga está ativa */
+  background-color: white;
+  padding: 1px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
-.box-descricao-text{
-    padding: 1rem;
-    text-align: left;
+.vaga:hover:not(.aberta) {
+  transform: scale(1.02);
 }
-hr{
-    border: 1px solid #b1b1b194;
-    margin: 1rem 0;
-    width: 100%;
+
+.vaga.aberta {
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 1rem;
+  text-align: left;
 }
-.status-andamento { /*Irão ter 3 tipos de status*/
-    color: rgb(1, 187, 51);
-    font-weight: bold;
+
+/*DESCRIÇÃO*/
+.box-descricao {
+  background-color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.box-descricao-text {
+  padding-top: 0px;
+  padding: 1rem;
+  text-align: left;
+}
+hr {
+  border: 1px solid #b1b1b194;
+  margin: 0rem 0;
+  margin-top: -1px;
+  width: 100%;
+}
+.status-andamento {
+  /*Irão ter 3 tipos de status*/
+  color: rgb(1, 187, 51);
+  font-weight: bold;
 }
 .resultado {
-    text-align: right;
-    margin-top: 20px; 
-    margin-right: 20px; 
-    margin-bottom: 20px;
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 .resultado button {
-    background-color: #dadada;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: none;
-    width: 130px; /* Define uma largura fixa para o botão */
-    margin: 1px; 
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: #dadada;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 130px; /* Define uma largura fixa para o botão */
+  margin: 1px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .resultado button:hover {
-    background-color: #FCFB30;
+  background-color: #fcfb30;
 }
 /*PAGINA DOS RESULTADOS*/
 .resultadogs {
-    background-color: #f5f5f5;
-    color: #333;
+  background-color: #f5f5f5;
+  color: #333;
 }
 .h1-dash {
-    font-size: 25px;
-    text-align: left;
-    color: rgb(0, 0, 0);
-    margin: 20px;
-  }
+  font-size: 25px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+}
 .h2-dash {
-    font-size: 20px;
-    text-align: left;
-    color: rgb(0, 0, 0);
-    margin: 20px;
+  font-size: 20px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  margin: 20px;
 }
 .barra-edi {
-    background-color: #ececec;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;  
+  background-color: #ececec;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 .barra-edi-icon {
-    display: flex;
-    flex-direction: row;
-    justify-content:left;
-    align-items: center;
-    padding: 6px;
-    margin-right: 5px; 
-    gap: 3px; /* Espaçamento entre ícone e texto */
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 6px;
+  margin-right: 5px;
+  gap: 3px; /* Espaçamento entre ícone e texto */
+  cursor: pointer;
 }
 .barra-edi-icon:hover {
-    background-color: #d8d8d8; /* Cor de fundo ao passar o mouse */
-    height: 28px;
+  background-color: #d8d8d8; /* Cor de fundo ao passar o mouse */
+  height: 28px;
 }
 .barra-edi-icon img {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 .barra-edi-icon p {
-    margin: 0;
-    font-size: 14px;
+  margin: 0;
+  font-size: 14px;
 }
-.quad{
-    width: 250px;
-    height: 250px;
-    background-color: #FCFB30;
-    border-radius: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    transition: transform 0.2s ease-in-out; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    border: 2px solid #F4F583; /* Adiciona uma borda sutil */
-    cursor: pointer; 
+.quad {
+  width: 250px;
+  height: 250px;
+  background-color: #fcfb30;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f4f583; /* Adiciona uma borda sutil */
+  cursor: pointer;
 }
 .quad:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 .perfil-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Faz a foto ser circular */
-    object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
-    margin-bottom: 1px; 
-    border: 3px solid #fff; /* Adiciona uma borda branca à foto */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Faz a foto ser circular */
+  object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+  margin-bottom: 1px;
+  border: 3px solid #fff; /* Adiciona uma borda branca à foto */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .perfil-nome {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px; /* Espaço entre o nome e a foto */
-    margin-bottom: 5px; /* Espaço entre o nome e o retângulo azul */
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px; /* Espaço entre o nome e a foto */
+  margin-bottom: 5px; /* Espaço entre o nome e o retângulo azul */
 }
 .info-box {
-    background-color: #465EFF;
-    color: white;
-    padding: 8px 15px; 
-    border-radius: 5px; 
-    font-size: 14px;
-    text-align: center; 
-    width: fit-content; /* Ajusta a largura ao conteúdo */
+  background-color: #465eff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  width: fit-content; /* Ajusta a largura ao conteúdo */
 }
 .exp-ranking {
-    background-color: #465EFF;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: none;
-    width: 100px;
-    margin: 25px; 
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: #465eff;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 100px;
+  margin: 25px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .exp-ranking:hover {
-    transform: scale(1.0); 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
-    background-color: #7da6ff; 
-    cursor: pointer; 
+  transform: scale(1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background-color: #7da6ff;
+  cursor: pointer;
 }
 .menu .btn {
-    background: transparent;
-    border: none;
-    color: white;
-    font-weight: 500;
-    padding: 8px 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-  } 
-  .menu .btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  .menu .btn.blue {
-    background-color: #7da6ff;
-    color: white;
-  }
-  .toolbar {
-    background-color: #efefef;
-    padding: 12px 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  .toolbar button {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 6px 14px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  .toolbar button:hover {
-    background-color: #f0f0f0;
-  } 
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.menu .btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.menu .btn.blue {
+  background-color: #7da6ff;
+  color: white;
+}
+.toolbar {
+  background-color: #efefef;
+  padding: 12px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.toolbar button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.toolbar button:hover {
+  background-color: #f0f0f0;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+  gap: 20px;
+  padding: 24px;
+}
+@media (max-width: 768px) {
   .dashboard {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
-    gap: 20px;
-    padding: 24px;
+    grid-template-columns: 1fr; /* Em telas menores, só uma coluna */
   }
-  @media (max-width: 768px) {
-    .dashboard {
-      grid-template-columns: 1fr; /* Em telas menores, só uma coluna */
-    }
-  }
-  .card {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
-  } 
-  .card:hover {
-    transform: translateY(-2px);
-  }
-  .card h3 {
-    font-size: 16px;
-    margin: 0 0 12px 0;
-    color: #3f51b5;
-  }
-  /*SOLICITAR VAGA*/
-.svagaGestor h1{
-    text-align: left;
-    color: rgb(0, 0, 0);
+}
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.card h3 {
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  color: #3f51b5;
+}
+/*SOLICITAR VAGA*/
+.svagaGestor h1 {
+  text-align: left;
+  color: rgb(0, 0, 0);
 }
 .cria-vaga {
-    float: right;
-    background-color: #465EFF;
-    color: white;
-    border: none;
-    margin: 1rem; 
-    width: 130px;
-    padding: 0.5rem 1rem;
-    padding-bottom: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+  float: right;
+  background-color: #465eff;
+  color: white;
+  border: none;
+  margin: 1rem;
+  width: 130px;
+  padding: 0.5rem 1rem;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .cria-vaga:hover {
-    background-color: #17a01b;
-    transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+  background-color: #17a01b;
+  transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
 }
-.form-group{
-    margin-top: 15px;
-    margin-bottom: 15px;
+.form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 fieldset {
-    margin: 1rem; /* Adiciona margem ao redor de cada fieldset */
-    padding: 1rem; /* Adiciona preenchimento interno ao fieldset */
-    border: 1px solid #cdcdcd; /* Adiciona uma borda para delimitar o grupo */
-    background-color: #ededed; /* Adiciona um fundo sutil para destacar o grupo */
-    border-radius: 5px;
+  margin: 1rem; /* Adiciona margem ao redor de cada fieldset */
+  padding: 1rem; /* Adiciona preenchimento interno ao fieldset */
+  border: 1px solid #cdcdcd; /* Adiciona uma borda para delimitar o grupo */
+  background-color: #ededed; /* Adiciona um fundo sutil para destacar o grupo */
+  border-radius: 5px;
 }
 
 legend {
-    padding: 0 0.5rem; /* Adiciona um pequeno preenchimento ao redor da legenda */
-    font-weight: bold; /* Deixa a legenda em negrito */
-    color: #333; /* Define a cor da legenda */
+  padding: 0 0.5rem; /* Adiciona um pequeno preenchimento ao redor da legenda */
+  font-weight: bold; /* Deixa a legenda em negrito */
+  color: #333; /* Define a cor da legenda */
 }
 
 .form-horizontal {
-    display:flex;
-    justify-content:left;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.material-symbols-outlined{
-    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
-    font-size: 20px; /* Ajusta o tamanho do ícone */
-    margin-right: 4px; /* Adiciona uma margem direita para espaçamento */
-    vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
-    color: #000000; /* Define a cor do ícone */
+.material-symbols-outlined {
+  cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
+  font-size: 20px; /* Ajusta o tamanho do ícone */
+  margin-right: 4px; /* Adiciona uma margem direita para espaçamento */
+  vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
+  color: #000000; /* Define a cor do ícone */
 }
 
-.material-symbols-outlined:hover{
-    color: #006CD0; /* Muda a cor do ícone ao passar o mouse */
-    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+.material-symbols-outlined:hover {
+  color: #006cd0; /* Muda a cor do ícone ao passar o mouse */
+  transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
 }
 
 .input-wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .input-wrapper input {
-    padding: 4px;
-    width: 110px;
-    background-color: #B9E0FF;
-    border: 1px solid #006CD0;
-    border-radius: 30px 0 0 30px;
-    margin-right: 0;
+  padding: 4px;
+  width: 110px;
+  background-color: #b9e0ff;
+  border: 1px solid #006cd0;
+  border-radius: 30px 0 0 30px;
+  margin-right: 0;
 }
 
 .input-wrapper button {
-    background-color: #B9E0FF;
-    border: 1px solid #006CD0;
-    padding: 0px;
-    border-radius: 0 30px 30px 0;
-    cursor: pointer;
-    display: flex; /* Garante que o ícone e o texto (se houver) estejam alinhados */
-    align-items: center;
-    justify-content: center; /* Centraliza o ícone dentro do botão */
-    min-width: unset; /* Impede que o botão tenha largura mínima */
+  background-color: #b9e0ff;
+  border: 1px solid #006cd0;
+  padding: 0px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  display: flex; /* Garante que o ícone e o texto (se houver) estejam alinhados */
+  align-items: center;
+  justify-content: center; /* Centraliza o ícone dentro do botão */
+  min-width: unset; /* Impede que o botão tenha largura mínima */
 }
 
 .input-wrapper button:hover {
-    background-color: #d32f2f;
-    border: none
+  background-color: #d32f2f;
+  border: none;
 }
 
 .input-wrapper .remove-btn {
-    /* Garante que o ícone tenha a cor correta e tamanho */
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-    height: auto;
-    width: auto;
+  /* Garante que o ícone tenha a cor correta e tamanho */
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: auto;
 }
-

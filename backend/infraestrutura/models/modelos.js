@@ -12,22 +12,7 @@ class vagaModel {
             resolve(resposta);
         });
     });
-        }
-        
-        criar(novavaga){
-            const sql = "INSERT INTO vagas SET ?";
-            conexao.query(sql, vaga, (error, resposta) => {
-          if (error) {
-            console.log("Deu erro no listar");
-            return;
-          }
-          console.log("tudo rodando");
-          } );
-        
-        }
-
-
-
+        } 
     }
 
 module.exports = new vagaModel();

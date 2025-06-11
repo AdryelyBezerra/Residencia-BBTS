@@ -8,7 +8,8 @@ router.get("/criarvagas", (req, res) =>{
     listaVagas.then(vaga => res.status(200).json(vaga)).catch((error) => res.status(400).json(error.message))
 });
 router.post("/criarvagas", (req, res) =>{
-    const resposta = vagasControle.criar();
+    const novavaga = req.body;
+    const resposta = vagasControle.criar(novavaga);
     res.send(resposta);
 });
 router.put("/criarvagas/:id", (req, res) =>{

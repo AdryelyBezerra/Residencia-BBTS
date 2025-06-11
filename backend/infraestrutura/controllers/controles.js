@@ -3,8 +3,8 @@ class vagasControle {
     buscar (){
         return modelos.listar();
     }
-    criar (){
-        return "Criar vaga";
+    criar (novavaga){
+        return modelos.criar(novavaga);
     }
     atualizar(id){
         return "Sistema atualizado" + id;

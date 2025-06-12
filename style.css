@@ -165,6 +165,7 @@ button:hover {
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
+  font-weight: bold;
 }
 .logout-btn:hover {
   background-color: #c0392b;
@@ -284,9 +285,16 @@ hr {
   margin-top: -1px;
   width: 100%;
 }
-.status-andamento {
-  /*Irão ter 3 tipos de status*/
+.status-andamento-ab {
   color: rgb(1, 187, 51);
+  font-weight: bold;
+}
+.status-andamento-ng {
+  color: rgb(187, 1, 1);
+  font-weight: bold;
+}
+.status-andamento-fn {
+  color: rgb(1, 57, 187);
   font-weight: bold;
 }
 .resultado {
@@ -490,10 +498,12 @@ hr {
   background-color: #465eff;
   color: white;
   border: none;
-  margin: 1rem;
-  width: 130px;
-  padding: 0.5rem 1rem;
-  padding-bottom: 10px;
+  width: 120px;
+  height: 40px;
+  margin-top: 8px;
+  margin-right: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;

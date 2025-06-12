@@ -57,6 +57,21 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
+
+button {
+  margin-top: 20px;
+  width: 250px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .logout-btn {
   background-color: #e74c3c;
   color: white;
@@ -66,6 +81,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
+  font-weight: bold;
 }
 .logout-btn:hover {
   background-color: #c0392b;
@@ -189,9 +205,16 @@ hr {
   margin-top: -1px;
   width: 100%;
 }
-.status-andamento {
-  /*Irão ter 3 tipos de status*/
+.status-andamento-ab {
   color: rgb(1, 187, 51);
+  font-weight: bold;
+}
+.status-andamento-ng {
+  color: rgb(187, 1, 1);
+  font-weight: bold;
+}
+.status-andamento-fn {
+  color: rgb(1, 57, 187);
   font-weight: bold;
 }
 .resultado {
@@ -203,6 +226,7 @@ hr {
 .resultado button {
   background-color: #dadada;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
   border: none;
   width: 130px; /* Define uma largura fixa para o botão */
   margin: 1px;

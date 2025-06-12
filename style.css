@@ -272,9 +272,11 @@ h1 {
 }
 
 .box-descricao-text {
-  padding-top: 0px;
   padding: 1rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 hr {
   border: 1px solid #b1b1b194;

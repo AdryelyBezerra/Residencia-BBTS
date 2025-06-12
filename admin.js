@@ -1,43 +1,43 @@
 //Pesquisa Tela Inicial Administrador
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   const searchInputs = document.querySelectorAll('input[type="search"]');
-  const searchButtons = document.querySelectorAll('.search button');
-  const contentContainers = document.querySelectorAll('.content');
+  const searchButtons = document.querySelectorAll(".search button");
+  const contentContainers = document.querySelectorAll(".content");
 
   // Adiciona uma mensagem "nenhuma vaga encontrada" em cada bloco .content
-  contentContainers.forEach(container => {
-    const mensagem = document.createElement('p');
-    mensagem.classList.add('mensagem-nenhuma-vaga');
-    mensagem.textContent = 'Nenhuma vaga encontrada :(';
-    mensagem.style.display = 'none';
-    mensagem.style.fontStyle = 'italic';
-    mensagem.style.color = '#fff';
-    mensagem.style.marginTop = '20px';
+  contentContainers.forEach((container) => {
+    const mensagem = document.createElement("p");
+    mensagem.classList.add("mensagem-nenhuma-vaga");
+    mensagem.textContent = "Nenhuma vaga encontrada :(";
+    mensagem.style.display = "none";
+    mensagem.style.fontStyle = "italic";
+    mensagem.style.color = "#fff";
+    mensagem.style.marginTop = "20px";
     container.appendChild(mensagem);
   });
 
   function realizarBusca(termo, containerIndex = 0) {
     const termoLimpo = termo.trim().toLowerCase();
     const container = contentContainers[containerIndex];
-    const vagas = container.querySelectorAll('.vaga');
-    const mensagem = container.querySelector('.mensagem-nenhuma-vaga');
+    const vagas = container.querySelectorAll(".vaga");
+    const mensagem = container.querySelector(".mensagem-nenhuma-vaga");
     let encontrouAlguma = false;
 
-    vagas.forEach(vaga => {
+    vagas.forEach((vaga) => {
       const texto = vaga.innerText.toLowerCase();
-      if (termoLimpo === '' || texto.includes(termoLimpo)) {
-        vaga.style.display = 'block';
+      if (termoLimpo === "" || texto.includes(termoLimpo)) {
+        vaga.style.display = "block";
         encontrouAlguma = true;
       } else {
-        vaga.style.display = 'none';
+        vaga.style.display = "none";
       }
     });
 
-    mensagem.style.display = encontrouAlguma ? 'none' : 'block';
+    mensagem.style.display = encontrouAlguma ? "none" : "block";
   }
 
   searchButtons.forEach((btn, i) => {
-    btn.addEventListener('click', function (event) {
+    btn.addEventListener("click", function (event) {
       event.preventDefault();
       const termo = searchInputs[i].value;
       realizarBusca(termo, i);
@@ -45,312 +45,335 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   searchInputs.forEach((input, i) => {
-    input.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
         event.preventDefault();
         realizarBusca(input.value, i);
       }
     });
 
-    input.addEventListener('input', function () {
+    input.addEventListener("input", function () {
       realizarBusca(input.value, i);
     });
   });
 });
 
 // Funcionalidades tela de vagas solicitadas
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector('.svagaAdm input[type="search"]');
-  const searchButton = document.querySelector('.svagaAdm .search button');
-  const container = document.querySelector('.analise-container');
-  const vagas = container.querySelectorAll('.analise-box');
+  const searchButton = document.querySelector(".svagaAdm .search button");
+  const container = document.querySelector(".analise-container");
+  const vagas = container.querySelectorAll(".analise-box");
 
   // Cria e adiciona a mensagem de "nenhuma vaga encontrada"
-  const mensagem = document.createElement('p');
-  mensagem.classList.add('mensagem-nenhuma-vaga');
-  mensagem.textContent = 'Nenhuma vaga encontrada :(';
-  mensagem.style.display = 'none';
-  mensagem.style.fontStyle = 'italic';
-  mensagem.style.color = 'black';
-  mensagem.style.marginTop = '20px';
+  const mensagem = document.createElement("p");
+  mensagem.classList.add("mensagem-nenhuma-vaga");
+  mensagem.textContent = "Nenhuma vaga encontrada :(";
+  mensagem.style.display = "none";
+  mensagem.style.fontStyle = "italic";
+  mensagem.style.color = "black";
+  mensagem.style.marginTop = "20px";
   container.appendChild(mensagem);
 
   function realizarBusca(termo) {
     const termoLimpo = termo.trim().toLowerCase();
     let encontrouAlguma = false;
 
-    vagas.forEach(vaga => {
+    vagas.forEach((vaga) => {
       const texto = vaga.innerText.toLowerCase();
-      if (termoLimpo === '' || texto.includes(termoLimpo)) {
-        vaga.style.display = 'block';
+      if (termoLimpo === "" || texto.includes(termoLimpo)) {
+        vaga.style.display = "block";
         encontrouAlguma = true;
       } else {
-        vaga.style.display = 'none';
+        vaga.style.display = "none";
       }
     });
 
-    mensagem.style.display = encontrouAlguma ? 'none' : 'block';
+    mensagem.style.display = encontrouAlguma ? "none" : "block";
   }
 
-  searchButton.addEventListener('click', function (event) {
+  searchButton.addEventListener("click", function (event) {
     event.preventDefault();
     realizarBusca(searchInput.value);
   });
 
-  searchInput.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
+  searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
       event.preventDefault();
       realizarBusca(searchInput.value);
     }
   });
 
-  searchInput.addEventListener('input', function () {
+  searchInput.addEventListener("input", function () {
     realizarBusca(searchInput.value);
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Seleção das telas
-    const telaUsuario = document.querySelector('.tela-admin');
-    const telaDescricao = document.querySelector('.descricao');
-    const telaResultados = document.querySelector('.resultadoadm');
-    const telaVagaSolicitada = document.querySelector('.svagaAdm');
-    const telaGeral = document.querySelector('.geral'); 
+// Clique em vaga para abrir a descrição
+document.addEventListener("DOMContentLoaded", function () {
+  const vagas = document.querySelectorAll(".vaga");
 
-    const vagas = document.querySelectorAll('.vaga');
-    const btnResultados = document.getElementById('resultados');
- 
-    const linksHome = document.querySelectorAll('a[href="#home"]');
-    const linksVaga = document.querySelectorAll('a[href="#vaga"]');
-    const linksGeral = document.querySelectorAll('a[href="#geral"]');
+  vagas.forEach((vaga) => {
+    vaga.addEventListener("click", () => {
+      const descricao = vaga.nextElementSibling;
+      const resultado = descricao?.nextElementSibling;
 
-    function esconderTelas() {
-        const telas = [telaUsuario, telaDescricao, telaResultados, telaVagaSolicitada, telaGeral];
-        telas.forEach(tela => {
-            if (tela) tela.style.display = 'none';
-        });
-    }
+      if (descricao && descricao.classList.contains("box-descricao")) {
+        const visivel = descricao.style.display === "block";
 
-    esconderTelas();
-    if (telaUsuario) telaUsuario.style.display = 'block';
+        descricao.style.display = visivel ? "none" : "block";
+        if (resultado && resultado.classList.contains("resultado")) {
+          resultado.style.display = visivel ? "none" : "block";
+        }
 
-    if (vagas) {
-        vagas.forEach(vaga => {
-            vaga.addEventListener('click', () => {
-                esconderTelas();
-                if (telaDescricao) telaDescricao.style.display = 'block';
-            });
-        });
-    }
+        // Alterna a visibilidade
+        descricao.style.display = visivel ? "none" : "block";
 
-    if (btnResultados) {
-        btnResultados.addEventListener('click', () => {
-            esconderTelas();
-            if (telaResultados) telaResultados.style.display = 'block';
-        });
-    }
-
-    if (linksVaga) {
-        linksVaga.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                esconderTelas();
-                if (telaVagaSolicitada) telaVagaSolicitada.style.display = 'block';
-            });
-        });
-    }
-
-    if (linksGeral) {
-        linksGeral.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                esconderTelas();
-                if (telaGeral) telaGeral.style.display = 'block';
-            });
-        });
-    }
-
-    if (linksHome) {
-        linksHome.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                esconderTelas();
-                if (telaUsuario) telaUsuario.style.display = 'block';
-            });
-        });
-    }
+        // Alterna a classe 'aberta' na vaga
+        vaga.classList.toggle("aberta", !visivel);
+      }
+    });
+  });
 });
 
-//==============RESULTADOS GRAFICOS================= 
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleção das telas
+  const telaUsuario = document.querySelector(".tela-admin");
+  const telaResultados = document.querySelector(".resultadoadm");
+  const telaVagaSolicitada = document.querySelector(".svagaAdm");
+
+  const btnResultados = document.getElementById("resultados");
+  const linksHome = document.querySelectorAll('a[href="#home"]');
+  const linksVaga = document.querySelectorAll('a[href="#vaga"]');
+
+  function esconderTelas() {
+    if (telaUsuario) telaUsuario.style.display = "none";
+    if (telaResultados) telaResultados.style.display = "none";
+    if (telaVagaSolicitada) telaVagaSolicitada.style.display = "none";
+  }
+
+  // Inicial: mostrar apenas telaUsuario
+  esconderTelas();
+  if (telaUsuario) telaUsuario.style.display = "block";
+
+  // Clique em Resultados
+  document.addEventListener("click", (e) => {
+    if (e.target && e.target.id === "resultados") {
+      esconderTelas();
+      if (telaResultados) telaResultados.style.display = "block";
+    }
+  });
+
+  // Clique em "Vagas Solicitadas"
+  if (linksVaga) {
+    linksVaga.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        esconderTelas();
+        if (telaVagaSolicitada) telaVagaSolicitada.style.display = "block";
+      });
+    });
+  }
+
+  // Clique em "Início"
+  if (linksHome) {
+    linksHome.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        esconderTelas();
+        if (telaUsuario) {
+          telaUsuario.style.display = "block";
+        }
+      });
+    });
+  }
+});
+
+//==============RESULTADOS GRAFICOS=================
 // Gráfico 1
- new Chart(document.getElementById('chart1'), {
-    type: 'bar',
-    data: {
-      labels: ['BERT', 'AWS', 'Scrapy'],
-      datasets: [{
-        label: '',
+new Chart(document.getElementById("chart1"), {
+  type: "bar",
+  data: {
+    labels: ["BERT", "AWS", "Scrapy"],
+    datasets: [
+      {
+        label: "",
         data: [15, 53, 22],
-        backgroundColor: ['#007bff', '#00c0ef', '#36a2eb']
-      }]
+        backgroundColor: ["#007bff", "#00c0ef", "#36a2eb"],
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    scales: { y: { beginAtZero: true } },
+    plugins: {
+      legend: {
+        display: false, // Desabilita a legenda
+      },
     },
-    options: {
-      responsive: true,
-      scales: { y: { beginAtZero: true } },
-      plugins: {
-            legend: {
-                display: false // Desabilita a legenda
-            }
-        }
-    }
-  });
+  },
+});
 
-  // Gráfico 2
-  new Chart(document.getElementById('chart2'), {
-    type: 'bar',
-    data: {
-      labels: ['Python', 'Selenium', 'Java', 'SQL', 'NoSQL', 'Linux'],
-      datasets: [{
-        label: '',
+// Gráfico 2
+new Chart(document.getElementById("chart2"), {
+  type: "bar",
+  data: {
+    labels: ["Python", "Selenium", "Java", "SQL", "NoSQL", "Linux"],
+    datasets: [
+      {
+        label: "",
         data: [84, 13, 81, 89, 83, 72],
-        backgroundColor: ['#fce303', '#f7c106', '#f9a825', '#ff9800', '#ff5722', '#ff7043']
-      }]
+        backgroundColor: [
+          "#fce303",
+          "#f7c106",
+          "#f9a825",
+          "#ff9800",
+          "#ff5722",
+          "#ff7043",
+        ],
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    scales: { y: { beginAtZero: true } },
+    plugins: {
+      legend: {
+        display: false, // Desabilita a legenda
+      },
     },
-    options: {
-      responsive: true,
-      scales: { y: { beginAtZero: true } },
-      plugins: {
-            legend: {
-                display: false // Desabilita a legenda
-            }
-        }
-    }
-  });
+  },
+});
 
-  // Gráfico 3
-  new Chart(document.getElementById('chart3'), {
-    type: 'bar',
-    data: {
-      labels: ['Criatividade', 'Analítico', 'Comunicação'],
-      datasets: [{
-          label: '',
+// Gráfico 3
+new Chart(document.getElementById("chart3"), {
+  type: "bar",
+  data: {
+    labels: ["Criatividade", "Analítico", "Comunicação"],
+    datasets: [
+      {
+        label: "",
         data: [37, 74, 68],
-        backgroundColor: ['#66bb6a', '#43a047', '#a5d6a7']
-      }]
+        backgroundColor: ["#66bb6a", "#43a047", "#a5d6a7"],
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    scales: { y: { beginAtZero: true } },
+    plugins: {
+      legend: {
+        display: false, // Desabilita a legenda
+      },
     },
-    options: {
-      responsive: true,
-      scales: { y: { beginAtZero: true } },
-      plugins: {
-            legend: {
-                display: false // Desabilita a legenda
-            }
-        }
-    }
-  });
+  },
+});
 
-  // Gráfico 4
-  new Chart(document.getElementById('chart4'), {
-    type: 'bar',
-    data: {
-      labels: ['Júnior', 'Pleno', 'Sênior'],
-      datasets: [{
-        label: '',
+// Gráfico 4
+new Chart(document.getElementById("chart4"), {
+  type: "bar",
+  data: {
+    labels: ["Júnior", "Pleno", "Sênior"],
+    datasets: [
+      {
+        label: "",
         data: [28, 30, 32],
-        backgroundColor: ['#ba68c8', '#7e57c2', '#5e35b1']
-      }]
+        backgroundColor: ["#ba68c8", "#7e57c2", "#5e35b1"],
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    scales: { y: { beginAtZero: true } },
+    plugins: {
+      legend: {
+        display: false, // Desabilita a legenda
+      },
     },
-    options: {
-      responsive: true,
-      scales: { y: { beginAtZero: true } },
-      plugins: {
-            legend: {
-                display: false // Desabilita a legenda
-            }
-        }
-    }
-  });
+  },
+});
 //USER MENU
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   setupUserDropdowns();
-  
+
   setupMutationObserver();
 });
 
 function setupUserDropdowns() {
   function closeAllDropdowns() {
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-      menu.style.display = 'none';
+    document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+      menu.style.display = "none";
     });
   }
 
-  document.querySelectorAll('.user-icon').forEach(icon => {
-    icon.addEventListener('click', function(e) {
+  document.querySelectorAll(".user-icon").forEach((icon) => {
+    icon.addEventListener("click", function (e) {
       e.stopPropagation();
-      const menu = this.closest('.user-menu').querySelector('.dropdown-menu');
-      
-      if (menu.style.display !== 'block') {
+      const menu = this.closest(".user-menu").querySelector(".dropdown-menu");
+
+      if (menu.style.display !== "block") {
         closeAllDropdowns();
       }
-      
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
     });
   });
 
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.user-menu')) {
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".user-menu")) {
       closeAllDropdowns();
     }
   });
 }
 
 function setupMutationObserver() {
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
       if (mutation.addedNodes.length) {
-        setupUserDropdowns(); 
+        setupUserDropdowns();
       }
     });
   });
-  
+
   observer.observe(document.body, {
     childList: true,
-    subtree: true
+    subtree: true,
   });
 }
 
 // ============== VAGAS SOLICITADAS ==============
 
-    // ============== PESQUISA NAS VAGAS SOLICITADAS ==============
- document.addEventListener('DOMContentLoaded', function() {
-    const searchBtn = document.getElementById('searchBtn');
-    const searchInput = document.getElementById('searchInput');
-    const vagas = document.querySelectorAll('.analise-box');
+// ============== PESQUISA NAS VAGAS SOLICITADAS ==============
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBtn = document.getElementById("searchBtn");
+  const searchInput = document.getElementById("searchInput");
+  const vagas = document.querySelectorAll(".analise-box");
 
-    function realizarBusca() {
-        const termo = searchInput.value.toLowerCase().trim();
+  function realizarBusca() {
+    const termo = searchInput.value.toLowerCase().trim();
 
-        vagas.forEach(card => {
-            const titulo = card.textContent.toLowerCase();
+    vagas.forEach((card) => {
+      const titulo = card.textContent.toLowerCase();
 
-            if (titulo.includes(termo)) {
-                card.style.display = 'flex'; // ou 'block', depende do layout
-            } else {
-                card.style.display = 'none';
-            }
-        });
+      if (titulo.includes(termo)) {
+        card.style.display = "flex"; // ou 'block', depende do layout
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  searchBtn.addEventListener("click", function () {
+    realizarBusca();
+  });
+
+  // Pressionar Enter
+  searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      realizarBusca();
     }
-
-    searchBtn.addEventListener('click', function () {
-        realizarBusca();
-    });
-
-    // Pressionar Enter
-    searchInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            event.preventDefault(); 
-            realizarBusca();
-        }
-    });
+  });
 });
 
 // ============== INTERAÇÃO COM A BOX DA VAGA SOLICITADA ==============
@@ -369,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      analiseBoxes.forEach(otherBox => {
+      analiseBoxes.forEach((otherBox) => {
         if (otherBox !== box && otherBox.classList.contains("ativo")) {
           otherBox.classList.remove("ativo");
         }

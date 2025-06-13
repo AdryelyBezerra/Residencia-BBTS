@@ -58,20 +58,6 @@ body {
   z-index: 10;
 }
 
-button {
-  margin-top: 20px;
-  width: 250px;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
 .logout-btn {
   background-color: #e74c3c;
   color: white;

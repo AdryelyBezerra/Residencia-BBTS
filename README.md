@@ -1,6 +1,6 @@
 # BB Tecnologia e Serviços
-
-Este projeto tem como objetivo desenvolver um portal interno para o Banco do Brasil Tecnologia e Serviços (BBTS), voltado a apoiar o setor de Gestão de Talentos na condução e otimização dos processos seletivos para novos colaboradores. A plataforma será uma ferramenta estratégica para centralizar, padronizar e agilizar as etapas de recrutamento e seleção, promovendo maior eficiência e transparência.
+## Este projeto integra as atividades da Residência Tecnológica, promovida pela Universidade Católica de Brasília em parceria com o Porto Digital
+Tem como objetivo desenvolver um portal interno para o Banco do Brasil Tecnologia e Serviços (BBTS), voltado a apoiar o setor de Gestão de Talentos na condução e otimização dos processos seletivos para novos colaboradores. A plataforma será uma ferramenta estratégica para centralizar, padronizar e agilizar as etapas de recrutamento e seleção, promovendo maior eficiência e transparência.
 
 ## 📊 Status do Projeto
 

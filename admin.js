@@ -341,41 +341,6 @@ function setupMutationObserver() {
   });
 }
 
-// ============== VAGAS SOLICITADAS ==============
-
-// ============== PESQUISA NAS VAGAS SOLICITADAS ==============
-document.addEventListener("DOMContentLoaded", function () {
-  const searchBtn = document.getElementById("searchBtn");
-  const searchInput = document.getElementById("searchInput");
-  const vagas = document.querySelectorAll(".analise-box");
-
-  function realizarBusca() {
-    const termo = searchInput.value.toLowerCase().trim();
-
-    vagas.forEach((card) => {
-      const titulo = card.textContent.toLowerCase();
-
-      if (titulo.includes(termo)) {
-        card.style.display = "flex"; // ou 'block', depende do layout
-      } else {
-        card.style.display = "none";
-      }
-    });
-  }
-
-  searchBtn.addEventListener("click", function () {
-    realizarBusca();
-  });
-
-  // Pressionar Enter
-  searchInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      realizarBusca();
-    }
-  });
-});
-
 // ============== INTERAÇÃO COM A BOX DA VAGA SOLICITADA ==============
 document.addEventListener("DOMContentLoaded", function () {
   // Seleciona todas as caixas individuais (analise-box)

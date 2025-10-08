@@ -1,0 +1,240 @@
+/*ESTILOS PERFIL CANDIDATO*/
+
+/* Barra de edição */
+.barra-edi {
+  background-color: #ececec;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.barra-edi-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 6px;
+  margin-right: 5px;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.barra-edi-icon:hover {
+  background-color: #d8d8d8;
+  height: 28px;
+}
+
+.barra-edi-icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.barra-edi-icon p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Container principal do perfil */
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Modal do perfil */
+.perfil-modal {
+  background-color: #dadada;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Seções */
+.secao-informacoes,
+.secao-requisitos {
+  margin-bottom: 30px;
+}
+
+.secao-informacoes h3,
+.secao-requisitos h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Campos de formulário */
+.campo-grupo {
+  margin-bottom: 15px;
+}
+
+.campo-grupo-linha {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.campo-grupo-linha .campo-grupo {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.campo-grupo label {
+  display: block;
+  margin-bottom: 6px;
+  color: #222;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.campo-grupo input,
+.campo-grupo textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+  outline: 2px solid #4CAF50;
+}
+
+.campo-grupo textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+/* Container das listas */
+.container-listas {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Lista de requisitos */
+.lista-requisitos {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex: 1;
+  min-width: 300px;
+  flex-wrap: wrap;
+}
+
+.item-requisito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 15px;
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-requisito:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nome-requisito {
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.indicadores {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicador {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.indicador.presente {
+  background-color: #4CAF50;
+}
+
+.indicador.ausente {
+  background-color: #f44336;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .perfil-modal {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .campo-grupo-linha {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .campo-grupo-linha .campo-grupo {
+    margin-bottom: 15px;
+  }
+  
+  .container-listas {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .lista-requisitos {
+    min-width: auto;
+  }
+}
+
+/* Avaliação do candidato */
+.avaliacao-candidato {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #166534;
+}
+
+.avaliacao-candidato strong {
+  color: #15803d;
+  font-weight: 600;
+}
+
+/* Botão voltar na navbar */
+.acao-voltar {
+  margin: 10px 20px;
+}
+
+.acao-voltar button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.acao-voltar button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}

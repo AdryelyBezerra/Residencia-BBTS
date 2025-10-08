@@ -1,484 +1,60 @@
+<!-- O index é a página de login -->
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBTS Talentos</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/logoPeq.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <!--TELA LOGIN-->
-    <div id="login" class="login">
-        <div class="logobb">
-            <img src="img/bbts[1].jpg" alt="logo-bbts">
-        </div>
-        <select id="tipo-usuario">
-            <option value="">Selecione</option>
-            <option value="administracao">Administração</option>
-            <option value="solicitante">Solicitante</option>
-        </select>
-        <div class="input-container">
-            <span class="icon" >
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-            </span>
-            <input type="text" placeholder="Usuário">
-        </div>
-        <div class="input-container">
-            <span class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
-                <path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm0-80h480v-400H240v400Zm240-120q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80ZM240-160v-400 400Z"/>
-              </svg>
-            </span>
-            <input type="password" placeholder="Senha" id="password-input"> <span class="toggle-password">    
-            </span>
-          </div>
-        <div class="link-direita">
-            <a href="#">Esqueceu sua senha?</a>
-        </div>
-        <button id="botao-entrar">Entrar</button>
-    </div>
-
-   <!--INTERFACE DO USUARIO-->
-
-
-    <div id="usuario" class="usuario" style="display: none;">
-          <!--NAVBAR-->
-        <div class="tela-usuario">
-            <header class="navbar">
-                <div class="logo">
-                    <img src="img/logoGraQ.png" alt="Logo" style="height: 35px;">
-                </div>
-                <div class="nav-right">
-                    <div class="links">
-                        <a href="#home">Início</a>
-                        <a href="#vaga">Solicitar Vaga</a>  
-                    </div>
-                    <div class="user-menu">
-                    <div class="user-icon">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="dropdown-menu" id="dropdownMenu">
-          <p><strong>ID:</strong> 74561329</p>
-          <p><strong>Nome:</strong> Alberto Nogueira</p>
-          <p><strong>Setor:</strong> Desenvolvimento de Software</p>
-          <p><strong>Cargo:</strong> Gestor de Projetos</p>
-          <button class="logout-btn">Sair da Conta</button>
-                 </div>
-                    </div>
-                </div>  
-            </header>
-        <!--TELA GESTOR-->
-            <div class="sfundo">
-                <div class="search"> <label for="site-search" class="visually-hidden"></label>
-                    <input type="search" id="site-search-usuario" name="q" placeholder="Pesquisar vaga" />
-                    <button type="submit" id="search button"><img src="img/search.svg" alt="Search Icon"></button>
-                </div>
-            </div>
-            <div class="content">
-                <h1>Vagas criadas por você</h1>
-                <!-- Engenheiro de Software -->
-<div class="box-vaga">
-  <div class="vaga">
-    <p>Código: 485734905</p>
-    <p><strong>Engenheiro de Software</strong></p>
-    <p>Data: 21/04/2025</p>
-  </div>
-  <div class="box-descricao" style="display: none">
-    <div class="box-descricao-text">
-      <hr />
-      <p class="status-andamento-ab">Em Andamento</p>
-      <div><strong>Número de vagas:</strong> <span>3</span></div>
-      <div>
-        <strong>Palavras Chave:</strong>
-        <span>Python, Java, NoSQL, CI/CD, Microserviços, Cloud, Testes Automatizados</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logoPeq.png" /> <!--Favicon-->
+    <link rel="stylesheet" href="./css/login.css" /> <!--CSS LOGIN-->
+    <link rel="stylesheet" href="./css/styles-globais.css" /> <!--CSS GLOBAL-->
+    <script src="/js/login.js"></script>
+  </head>
+  <body class="login">
+      <div class="logobb">
+        <img src="img/bbts[1].jpg" alt="logo-bbts" />
       </div>
-      <div><strong>Nível de experiência:</strong> <span>Sênior</span></div>
-      <div><strong>Localização:</strong> <span>Brasília, DF</span></div>
-      <div><strong>Modalidade de trabalho:</strong> <span>Híbrido</span></div>
-      <div><strong>Prioridade:</strong> <span>Alta</span></div>
-      <div>
-        <strong>Observações:</strong>
-        <span>Projeto de grande escala precisa de desenvolvedores experientes para novos módulos.</span>
+      <select id="tipo-usuario">
+        <option value="">Selecione</option>
+        <option value="administracao">Administrador</option>
+        <option value="solicitante">Solicitante</option>
+      </select>
+      <div class="input-container">
+        <span class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#ffffff"
+          >
+            <path
+              d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+            />
+          </svg>
+        </span>
+        <input type="text" placeholder="Usuário" />
       </div>
-    </div>
-  </div>
-  <div class="resultado" style="display: none">
-    <button id="resultados">Resultados</button>
-  </div>
-</div>
-
-<div class="box-vaga">
-  <div class="vaga">
-    <p>Código: 357001743</p>
-    <p><strong>Analista de Dados</strong></p>
-    <p>Data: 26/01/2025</p>
-  </div>
-  <div class="box-descricao" style="display: none">
-    <div class="box-descricao-text">
-      <hr />
-      <p class="status-andamento-fn">Finalizado</p>
-      <div><strong>Número de vagas:</strong> <span>2</span></div>
-      <div>
-        <strong>Palavras Chave:</strong>
-        <span>SQL, Python, Big Data, Power BI, ETL, Hadoop, Azure</span>
+      <div class="input-container">
+        <span class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#ffffff"
+          >
+            <path
+              d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm0-80h480v-400H240v400Zm240-120q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80ZM240-160v-400 400Z"
+            />
+          </svg>
+        </span>
+        <input type="password" placeholder="Senha" id="password-input" />
+        <span class="toggle-password"> </span>
       </div>
-      <div><strong>Nível de experiência:</strong> <span>Pleno</span></div>
-      <div><strong>Localização:</strong> <span>São Paulo, SP</span></div>
-      <div><strong>Modalidade de trabalho:</strong> <span>Remoto</span></div>
-      <div><strong>Prioridade:</strong> <span>Média</span></div>
-      <div>
-        <strong>Observações:</strong>
-        <span>Buscamos profissionais com experiência em análise de grandes volumes de dados e visualização interativa.</span>
+      <div class="link-direita">
+        <a href="#">Esqueceu sua senha?</a>
       </div>
-    </div>
-  </div>
-  <div class="resultado" style="display: none">
-    <button id="resultados">Resultados</button>
-  </div>
-</div>
-
-<div class="box-vaga">
-  <div class="vaga">
-    <p>Código: 276598023</p>
-    <p><strong>UX/UI Designer</strong></p>
-    <p>Data: 18/12/2024</p>
-  </div>
-  <div class="box-descricao" style="display: none">
-    <div class="box-descricao-text">
-      <hr />
-      <p class="status-andamento-ng">Recusado</p>
-      <div><strong>Número de vagas:</strong> <span>1</span></div>
-      <div>
-        <strong>Palavras Chave:</strong>
-        <span>Figma, Design System, Prototipagem, Acessibilidade, Testes de Usabilidade, Adobe XD</span>
-      </div>
-      <div><strong>Nível de experiência:</strong> <span>Júnior</span></div>
-      <div><strong>Localização:</strong> <span>Recife, PE</span></div>
-      <div><strong>Modalidade de trabalho:</strong> <span>Presencial</span></div>
-      <div><strong>Prioridade:</strong> <span>Baixa</span></div>
-      <div>
-        <strong>Observações:</strong>
-        <span>Atuação em equipe multidisciplinar com foco em inclusão digital e melhoria de interfaces públicas.</span>
-      </div>
-    </div>
-  </div>
-  <div class="resultado" style="display: none">
-    <button id="resultados">Resultados</button>
-  </div>
-</div>
-
-                </div>
-            </div>
-        </div>
-
-<!--RESULTADOS-->
-    <div class="resultadogs">
-       <header class="navbar">
-                <div class="logo">
-                    <img src="img/logoGraQ.png" alt="Logo" style="height: 35px;">
-                </div>
-                <div class="nav-right">
-                    <div class="links">
-                        <a href="#home">Início</a>
-                        <a href="#vaga">Solicitar Vaga</a>  
-                    </div>
-                    <div class="user-menu">
-                    <div class="user-icon">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="dropdown-menu" id="dropdownMenu">
-              <p><strong>ID:</strong> 74561329</p>
-          <p><strong>Nome:</strong> Alberto Nogueira</p>
-          <p><strong>Setor:</strong> Desenvolvimento de Software</p>
-          <p><strong>Cargo:</strong> Gestor de Projetos</p>
-          <button class="logout-btn">Sair da Conta</button>
-                 </div>
-                    </div>
-                </div>  
-            </header>
-        <div class="barra-edi">
-            <div class="barra-edi-icon">
-                <img src="img/draft.svg" alt="">
-                <p>Arquivo</p>
-                <img src="img/arrow_baixo.svg" alt="">
-            </div>
-            <div class="barra-edi-icon">
-                <img src="img/file_export.svg" alt="">
-                <p>Exportar</p>
-                <img src="img/arrow_baixo.svg" alt="">
-            </div>
-            <div class="barra-edi-icon">
-                <img src="img/save.svg" alt="">
-                <p>Salvar</p>
-            </div>
-            <div class="barra-edi-icon">
-                <img src="img/edit.svg" alt="">
-                <p>Editar</p>
-            </div>   
-        </div>
-
-        <h2 class="h2-dash">Ranking de Perfis</h2>
-            <div class="form-horizontal">
-                <div class="quad">
-                    <p class="perfil-nome">1° Colocado</p>
-                    <img src="img/cand1.jpg" alt="Foto de Perfil" class="perfil-pic">
-                    <p class="perfil-nome">André Lima</p>
-                    <div class="info-box">85% dos Requisitos</div>
-                </div>
-                <div class="quad">
-                    <p class="perfil-nome">2° Colocado</p>
-                    <img src="img/cand2.jpg" alt="Foto de Perfil" class="perfil-pic">
-                    <p class="perfil-nome">Anna Cardoso</p>
-                    <div class="info-box">82% dos Requisitos</div>
-                </div>
-                <div class="quad">
-                    <p class="perfil-nome">3° Colocado</p>
-                    <img src="img/cand3.jpg" alt="Foto de Perfil" class="perfil-pic">
-                    <p class="perfil-nome">Lívia Silva</p>
-                    <div class="info-box">79% dos Requisitos</div>
-                </div>
-            </div>
-            <button class="exp-ranking">Expandir
-            </button>
-            <h1 class="h1-dash">Visualização dos Dados:</h1>
-
-            <section class="dashboard">
-                <section class="card">
-                <h3>Tecnologias sugeridas para qualificação</h3>
-                <canvas id="chart1"></canvas>
-                </section>
-                <section class="card">
-                <h3>Tecnologias - Frequência nos Perfis</h3>
-                <canvas id="chart2"></canvas>
-                </section>
-                <section class="card">
-                <h3>Soft Skills - Frequência nos Perfis</h3>
-                <canvas id="chart3"></canvas>
-                </section>
-                <section class="card">
-                <h3>Relação de Experiência e Compatibilidade</h3>
-                <canvas id="chart4"></canvas>
-                </section>
-            </section>
-    </div>
-<!--SOLICITAR VAGA-->
-    <div class="svagaGestor" style="display: none;">
-      <header class="navbar">
-                <div class="logo">
-                    <img src="img/logoGraQ.png" alt="Logo" style="height: 35px;">
-                </div>
-                <div class="nav-right">
-                    <div class="links">
-                        <a href="#home">Início</a>
-                        <a href="#vaga">Solicitar Vaga</a>  
-                    </div>
-                    <div class="user-menu">
-                    <div class="user-icon">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="dropdown-menu" id="dropdownMenu">
-           <p><strong>ID:</strong> 74561329</p>
-          <p><strong>Nome:</strong> Alberto Nogueira</p>
-          <p><strong>Setor:</strong> Desenvolvimento de Software</p>
-          <p><strong>Cargo:</strong> Gestor de Projetos</p>
-          <button class="logout-btn">Sair da Conta</button>
-                 </div>
-                    </div>
-                </div>  
-            </header>
-        <main>
-            <form action="/submit-vaga" method="post">
-                
-                <!-- Informações da Vaga -->
-                <fieldset>
-                    <legend>Informações da Vaga</legend>
-    
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label for="nome-cargo">Nome do Cargo:</label>
-                            <input type="text" id="nome-cargo" name="nome-cargo" placeholder="Ex: Scrum Master" required>
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="num-vagas">Número de vagas:</label>
-                            <input type="number" id="num-vagas" name="num-vagas" min="1" required>
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="modalidade-trabalho">Modalidade de Trabalho:</label>
-                            <select id="modalidade-trabalho" name="modalidade-trabalho" required>
-                                <option value="">Selecione</option>
-                                    <optgroup label="Híbrido">
-                                        <option value="integral-híbrido">Integral</option>
-                                        <option value="meio-periodo-híbrido">Meio Período</option>
-                                        <option value="contrato-temporario-híbrido">Contrato Temporário</option>
-                                        <option value="estagio-híbrido">Estágio</option>
-                                    </optgroup>
-                                    <optgroup label="Presencial">
-                                        <option value="integral-presencial">Integral</option>
-                                        <option value="meio-periodo-presencial">Meio Período</option>
-                                        <option value="contrato-temporario-presencial">Contrato Temporário</option>
-                                        <option value="estagio-presencial">Estágio</option>
-                                    </optgroup>
-                                    <optgroup label="À Distância">
-                                        <option value="integral-distancia">Integral</option>
-                                        <option value="meio-periodo-distancia">Meio Período</option>
-                                        <option value="contrato-temporario-distancia">Contrato Temporário</option>
-                                        <option value="estagio-distancia">Estágio</option>
-                                    </optgroup>
-                            </select>
-                    </div>
-                </div>
-    
-                
-                    <div class="form-group">
-                        <label>Habilidades Técnicas:</label><br>
-                        <div id="container-habilidades-tecnicas" class="form-horizontal"></div>
-                        <span class="material-symbols-outlined" id="add-habilidade-tecnica">add</span>
-                    </div>
-            
-    
-                    <div class="form-group">
-                        <label>Habilidades Interpessoais:</label><br>
-                        <div id="container-habilidades-inter" class="form-horizontal"></div>
-                        <span class="material-symbols-outlined" id="add-habilidade-inter">add</span>
-                    </div>
-                </fieldset>
-    
-                <!-- Formação Acadêmica -->
-                <fieldset>
-                   <legend>Diplomas</legend>
-                        <div class="form-horizontal">
-                            <div class="form-group">
-                                <label for="diploma">Diploma:</label>
-                                    <select id="diploma" name="diploma">
-                                        <option value="">Selecione</option>
-                                            <optgroup label="Graduação">
-                                                <option value="bacharelado">Bacharelado</option>
-                                                <option value="licenciatura">Licenciatura</option>
-                                                <option value="tecnologo">Tecnólogo</option>
-                                            </optgroup>
-                                            <optgroup label="Pós-Graduação">
-                                                <option value="mestrado">Mestrado</option>
-                                                <option value="doutorado">Doutorado</option>
-                                            </optgroup>
-                                    </select>
-                            </div>
-
-                        <div class="form-group">
-                            <label for="area-estudo">Área de estudo:</label>
-                            <input type="text" id="area-estudo" name="area-estudo" placeholder="Ex: Ciência da Computação" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="certificacao">Certificação:</label>
-                        <input type="text" id="certificacao" name="certificacao" placeholder="Ex: PMP Profissional de Gerenciamento" required>
-                    </div> 
-                    <!-- Adicionar interatividade para criar mais um campo Formação ao clicar no icone "mais" -->
-                </fieldset>
-                <!-- Idiomas -->
-                <fieldset>
-                    <legend>Idiomas</legend>
-    
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label for="idiomas">Idioma:</label>
-                            <input type="text" id="idiomas" name="idiomas" placeholder="Ex: Inglês">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="nivel-idioma">Nível:</label>
-                            <select id="nivel-idioma" name="nivel-idioma">
-                                <option value="">Selecione</option>
-                                <option value="basico">Básico</option>
-                                <option value="intermediario">Intermediário</option>
-                                <option value="avancado">Avançado</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <!-- Adicionar interatividade para criar mais um campo Idioma ao clicar no icone "mais" -->
-                </fieldset>
-    
-                <!-- Experiência Profissional -->
-                <fieldset>
-                    <legend>Experiência Profissional</legend>
-    
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label for="empresas">Empresa (atual ou anterior): </label>
-                            <input type="text" id="empresas" name="empresas" placeholder="Ex: XYZ">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="nivel-experiencia">Nível de Experiência:</label>
-                            <select id="nivel-experiencia" name="nivel-experiencia">
-                                <option value="">Selecione</option>
-                                <option value="junior">Júnior</option>
-                                <option value="pleno">Pleno</option>
-                                <option value="senior">Sênior</option>
-                            </select>
-                        </div>
-                    </div>
-    
-                    <!-- Adicionar interatividade para criar mais um campo Empresa ao clicar no icone "mais" -->
-                </fieldset>
-    
-                <!-- Localização -->
-                <fieldset>
-                    <legend>Localização</legend>
-    
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label for="pais">País:</label>
-                            <input type="text" id="pais" name="pais" placeholder="Ex: Brasil">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="estado">Estado:</label>
-                            <input type="text" id="estado" name="estado" placeholder="Ex: Ceará">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="cidade">Cidade:</label>
-                            <input type="text" id="cidade" name="cidade" placeholder="Ex: Fortaleza">
-                        </div>
-                    </div>
-    
-                </fieldset>
-    
-                <!-- Detalhes da Solicitação -->
-                <fieldset>
-                    <legend>Detalhes da Solicitação</legend>
-    
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label for="prioridade-vaga">Prioridade da Vaga:</label>
-                            <select id="prioridade-vaga" name="prioridade-vaga" required>
-                                <option value="">Selecione</option>
-                                <option value="baixa">Baixa</option>
-                                <option value="media">Média</option>
-                                <option value="alta">Alta</option>
-                            </select>
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="observacao">Observação:</label>
-                            <input type="text" id="observacao" name="observacao"></input>
-                        </div>
-                    </div>
-    
-                </fieldset>
-    
-                <button type="submit" class="cria-vaga">Criar vaga</button>
-            </form>
-        </main>
-    </div>
-    <script src="script.js"></script>
-</body>
+      <button id="botao-entrar">Entrar</button>
+  </body>
 </html>

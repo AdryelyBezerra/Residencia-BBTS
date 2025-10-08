@@ -1,0 +1,221 @@
+/*ESTILOS RESULTADO*/
+
+.form-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.h1-dash {
+  font-size: 25px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+}
+.h2-dash {
+  font-size: 20px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  margin-left: 55px;
+}
+.barra-edi {
+  background-color: #ececec;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.barra-edi-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 6px;
+  margin-right: 5px;
+  gap: 3px; /* Espaçamento entre ícone e texto */
+  cursor: pointer;
+}
+.barra-edi-icon:hover {
+  background-color: #d8d8d8; /* Cor de fundo ao passar o mouse */
+  height: 28px;
+}
+.barra-edi-icon img {
+  width: 25px;
+  height: 25px;
+}
+.barra-edi-icon p {
+  margin: 0;
+  font-size: 14px;
+}
+.quad {
+  width: 90%;
+  height: 70px;
+  background-color: #fcfb30;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* margin-left: 20px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: space-between; /* Centraliza verticalmente */
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f4f583; /* Adiciona uma borda sutil */
+  cursor: pointer;
+}
+.quad:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+.perfil-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Faz a foto ser circular */
+  object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+  margin-bottom: 1px;
+  border: 3px solid #fff; /* Adiciona uma borda branca à foto */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.perfil-nome {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px; /* Espaço entre o nome e a foto */
+  margin-bottom: 5px; /* Espaço entre o nome e o retângulo azul */
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+
+.info-box {
+  background-color: #465eff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+.accepted {
+    background-color: #4bc653;
+}
+
+.rejected {
+    background-color: #ff4c4c;
+}
+
+
+.info-box-mais {
+  background-color: #465eff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+.exp-ranking {
+  background-color: #465eff;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.exp-ranking a {
+  text-decoration: none; 
+  color: #fff; 
+}
+.exp-ranking:hover {
+  transform: scale(1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background-color: #7da6ff;
+  cursor: pointer;
+}
+.toolbar {
+  background-color: #efefef;
+  padding: 12px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.toolbar button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.toolbar button:hover {
+  background-color: #f0f0f0;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+  gap: 20px;
+  padding: 24px;
+}
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr; /* Em telas menores, só uma coluna */
+  }
+}
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.card h3 {
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  color: #3f51b5;
+}
+
+/* Botão voltar na navbar */
+.acao-voltar {
+  margin: 10px 20px;
+  margin-bottom: 30px;
+
+}
+
+.acao-voltar button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.acao-voltar button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}

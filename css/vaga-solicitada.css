@@ -1,0 +1,174 @@
+/*ESTILO VAGA SOLICITADA*/
+.svagaAdm {
+  min-height: 100vh;
+  background-color: #ededed;
+}
+.sfundo {
+  background-color: #fcfb30;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.search {
+  display: flex;
+  width: 400px;
+  border-radius: 30px;
+  border: 1px solid #d0d0d094;
+  align-items: center;
+  overflow: hidden;
+}
+.search input[type="search"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 19px;
+  height: 1px; /* Esclarecendo a altura do input */
+  width: 194px; /* Esclarecendo a largura do input */
+  font-size: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.search button {
+  border: none;
+  background-color: #e8e8e8;
+  color: #494949;
+  margin-top: 0px;
+  padding: 10px 15px;
+  height: 40px; /* Esclarecendo a altura do botão */
+  width: 50px; /* Esclarecendo a largura do botão */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.search button img {
+  width: 20px; /* Exemplo para ajustar o tamanho do SVG */
+  height: 20px;
+}
+h1 {
+  text-align: left;
+  margin-left: 20px;
+  color: rgb(0, 0, 0);
+}
+.analise-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.analise-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 8px 8px;
+  width: 700px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.analise-opcoes {
+  display: none; /* Esconde por padrão */
+}
+.abre-desc.ativo + .analise-opcoes {
+  display: block; /* Mostra somente quando .abre-desc está ativo */
+}
+.analise-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.analise-superior {
+  position: absolute;
+  top: 10px; /* Ajuste conforme necessário para a posição vertical */
+  right: 10px; /* Ajuste conforme necessário para a posição horizontal  /* Ajuste o tamanho da fonte se precisar */
+}
+.analise-detail {
+  border-top: #d1d1d1 solid 2px;
+  border-bottom: #d1d1d1 solid 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative; /* Adicionado para posicionamento absoluto do código da vaga dentro dele */
+  width: 100%; /* Garante que o div ocupa a largura total */
+}
+.analise-detail p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.analise-opcoes {
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  flex-basis: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.analise-box.ativo .analise-opcoes {
+  display: block;
+}
+.analise-opcoes label {
+  flex-basis: 100%;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.analise-opcoes input {
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+.analise-justificativa {
+  padding-top: 20px;
+}
+.analise-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+.btn-aprovar {
+  background-color: #465eff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-reprovar {
+  background-color: #465eff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-aprovar:hover {
+  background-color: darkgreen;
+}
+.btn-reprovar:hover {
+  background-color: darkred;
+}
+.hidden {
+  display: none !important;
+}

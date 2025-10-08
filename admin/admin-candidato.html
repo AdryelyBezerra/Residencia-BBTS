@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil do Candidato</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logoPeq.png" />
+    <!--Favicon-->
+    <link rel="stylesheet" href="/css/styles-globais.css" />
+    <!--CSS GLOBAL-->
+    <link rel="stylesheet" href="/css/admin-candidato.css" />
+    <!--CSS ADMINISTRADOR CANDIDATO-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!--ICONES-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="/js/scripts-globais.js"></script>
+    <script src="/js/admin-resultado.js"></script>
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <div id="navbar-admin"></div>
+      <div class="barra-edi">
+        <div class="barra-edi-icon">
+          <img src="/img/draft.svg" alt="" />
+          <p>Arquivo</p>
+          <img src="/img/arrow_baixo.svg" alt="" />
+        </div>
+        <div class="barra-edi-icon">
+          <img src="/img/file_export.svg" alt="" />
+          <p>Exportar</p>
+          <img src="/img/arrow_baixo.svg" alt="" />
+        </div>
+        <div class="barra-edi-icon">
+          <img src="/img/save.svg" alt="" />
+          <p>Salvar</p>
+        </div>
+        <div class="barra-edi-icon">
+          <img src="/img/edit.svg" alt="" />
+          <p>Editar</p>
+        </div>
+      </div>
+      <div class="acao-voltar">
+        <button onclick="window.history.back()">← Voltar</button>
+      </div>
+
+      <section class="perfil-container">
+        <div class="perfil-modal">
+          
+          <!-- Informações Pessoais -->
+          <div class="secao-informacoes">
+            <h3>Informações Pessoais</h3>
+            
+            <div class="campo-grupo">
+              <label>Nome:</label>
+              <input type="text" value="Thiago de Jesus" readonly>
+            </div>
+            
+            <div class="campo-grupo-linha">
+              <div class="campo-grupo">
+                <label>Número de contato:</label>
+                <input type="text" value="4002 8922" readonly>
+              </div>
+              
+              <div class="campo-grupo">
+                <label>Email:</label>
+                <input type="email" value="Thiago@gmail.com" readonly>
+              </div>
+            </div>
+            
+            <div class="campo-grupo">
+              <label>Descrição:</label>
+              <textarea readonly>Sou apaixonado por tecnologia e programação. Tenho dedicação em aprender novas ferramentas e linguagens, buscando sempre evoluir minhas habilidades e contribuir com projetos inovadores.</textarea>
+            </div>
+
+            <div class="campo-grupo">
+              <label>Idade:</label>
+              <input type="number" value="18" readonly>
+            </div>
+
+            <div class="campo-grupo">
+              <label>Cidade:</label>
+              <input type="text" value="Brasília" readonly>
+            </div>
+
+            <div class="campo-grupo-linha">
+              <div class="campo-grupo">
+                <label>LinkedIn:</label>
+                <input type="text" value="linkedin.com/in/thiago" readonly>
+              </div>
+              <div class="campo-grupo">
+                <label>GitHub:</label>
+                <input type="text" value="github.com/thiago" readonly>
+              </div>
+            </div>
+
+            <div class="campo-grupo">
+              <label>Formação:</label>
+              <input type="text" value="Ciência da Computação - UCB" readonly>
+            </div>
+          </div>
+          
+          <!-- Seção de Requisitos -->
+          <div class="secao-requisitos">
+            <h3>Requisitos:</h3>
+            
+            <div class="container-listas">
+              <div class="lista-requisitos">
+                <div class="item-requisito">
+                  <span class="nome-requisito">HTML:</span>
+                  <div class="indicador presente"></div>
+                </div>     
+                <div class="item-requisito">
+                  <span class="nome-requisito">HTML:</span>
+                  <div class="indicador presente"></div>
+                </div>   
+                <div class="item-requisito">
+                  <span class="nome-requisito">Java:</span>
+                  <div class="indicador presente"></div>
+                </div>
+                <div class="item-requisito">
+                  <span class="nome-requisito">C#:</span>
+                  <div class="indicador presente"></div>
+                </div>
+                  <div class="item-requisito">
+                    <span class="nome-requisito">Springboot:</span>
+                  <div class="indicador presente"></div>
+                </div> 
+                  <div class="item-requisito">
+                    <span class="nome-requisito">SpringSecurity:</span>
+                  <div class="indicador presente"></div>
+                </div>
+                                <div class="item-requisito">
+                  <span class="nome-requisito">HTML:</span>
+                  <div class="indicador presente"></div>
+                </div>     
+                <div class="item-requisito">
+                  <span class="nome-requisito">Jira:</span>
+                  <div class="indicador ausente"></div>
+                </div>   
+                <div class="item-requisito">
+                  <span class="nome-requisito">CI/CD:</span>
+                  <div class="indicador ausente"></div>
+                </div>
+                <div class="item-requisito">
+                  <span class="nome-requisito">Testes Unitarios:</span>
+                  <div class="indicador presente"></div>
+                </div>
+                  <div class="item-requisito">
+                    <span class="nome-requisito">Swift:</span>
+                  <div class="indicador ausente"></div>
+                </div> 
+                  <div class="item-requisito">
+                    <span class="nome-requisito">UIKit:</span>
+                  <div class="indicador presente"></div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="avaliacao-candidato">
+            <p>Com base nos requisitos atendidos, este candidato possui aproximadamente <strong>85%</strong> de aceitação para esta vaga.</p>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>

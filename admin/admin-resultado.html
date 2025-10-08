@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultado</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logoPeq.png" />
+    <!--Favicon-->
+    <link rel="stylesheet" href="/css/styles-globais.css" />
+    <!--CSS GLOBAL-->
+    <link rel="stylesheet" href="/css/admin-resultado.css" />
+    <!--CSS ADMINISTRADOR RESULTADO-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--CHART.JS (Gráficos)-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!--ICONES-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="/js/scripts-globais.js"></script>
+    <script src="/js/admin-resultado.js"></script>
+    <script src="/js/admin-candidatos.js"></script>
+  </head>
+  <body>
+    <!--RESULTADOS-->
+
+    <!--NAVBAR-->
+    <div id="navbar-admin"></div>
+
+    <div class="resultadoadm">
+
+      <div class="barra-edi">
+        <div class="barra-edi-icon">
+          <img src="/img/draft.svg" alt="" />
+          <p>Arquivo</p>
+          <img src="/img/arrow_baixo.svg" alt="" />
+        </div>
+        <div class="barra-edi-icon">
+          <img src="/img/file_export.svg" alt="" />
+          <p>Exportar</p>
+          <img src="/img/arrow_baixo.svg" alt="" />
+        </div>
+        <div class="barra-edi-icon">
+          <img src="/img/save.svg" alt="" />
+          <p>Salvar</p>
+        </div>
+        <div class="barra-edi-icon">
+          <img src="/img/edit.svg" alt="" />
+          <p>Editar</p>
+        </div>
+      </div>
+
+      <h2 class="h2-dash">Ranking de Perfis</h2>
+      <div class="form-horizontal">
+        <div class="quad">
+          <!-- <p class="perfil-nome">1° Colocado</p> -->
+          <!-- <img src="/img/cand1.jpg" alt="Foto de Perfil" class="perfil-pic" /> -->
+          <p class="perfil-nome">André Lima</p>
+          <div class="info-container">
+            <div class="info-box accepted">85% dos Requisitos</div>
+            <div class="info-box-mais">Veja mais</div>
+          </div>
+        </div>
+        <div class="quad">
+          <!-- <p class="perfil-nome">2° Colocado</p> -->
+          <!-- <img src="/img/cand2.jpg" alt="Foto de Perfil" class="perfil-pic" /> -->
+          <p class="perfil-nome">João Gomes</p>
+          <div class="info-container">
+            <div class="info-box accepted">82% dos Requisitos</div>
+            <div class="info-box-mais">Veja mais</div>
+          </div>
+        </div>
+        <div class="quad">
+          <!-- <p class="perfil-nome">3° Colocado</p> -->
+          <!-- <img src="/img/cand3.jpg" alt="Foto de Perfil" class="perfil-pic" /> -->
+          <p class="perfil-nome">Thiago de Jesus</p>
+          <div class="info-container">
+            <div class="info-box">77% dos Requisitos</div>
+            <div class="info-box-mais">Veja mais</div>
+          </div>
+        </div>
+        <button class="exp-ranking">
+          <a href="./admin-candidatos.html">Expandir</a>
+        </button>
+      </div>
+      <h1 class="h1-dash">Visualização dos Dados:</h1>
+
+      <section class="dashboard">
+        <section class="card">
+          <h3>Tecnologias sugeridas para qualificação</h3>
+          <canvas id="chart1"></canvas>
+        </section>
+        <section class="card">
+          <h3>Tecnologias - Frequência nos Perfis</h3>
+          <canvas id="chart2"></canvas>
+        </section>
+        <section class="card">
+          <h3>Soft Skills - Frequência nos Perfis</h3>
+          <canvas id="chart3"></canvas>
+        </section>
+        <section class="card">
+          <h3>Relação de Experiência e Compatibilidade</h3>
+          <canvas id="chart4"></canvas>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

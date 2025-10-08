@@ -1,0 +1,147 @@
+/*ESTILOS TELA INICIAL*/
+.content {
+  background-color: #465eff;
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+  min-height: calc(100vh - 70px - 56px); /* 70px da .sfundo, 56px da navbar (ajuste se necessário) */
+  box-sizing: border-box;
+}
+.sfundo {
+  background-color: #fcfb30;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.search {
+  display: flex;
+  width: 400px;
+  border-radius: 30px;
+  border: 1px solid #d0d0d094;
+  align-items: center;
+  overflow: hidden;
+}
+.search input[type="search"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 19px;
+  height: 1px; /* Esclarecendo a altura do input */
+  width: 194px; /* Esclarecendo a largura do input */
+  font-size: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.search button {
+  border: none;
+  background-color: #e8e8e8;
+  color: #494949;
+  margin-top: 0px;
+  padding: 10px 15px;
+  height: 40px; /* Esclarecendo a altura do botão */
+  width: 50px; /* Esclarecendo a largura do botão */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.search button img {
+  width: 20px; /* Exemplo para ajustar o tamanho do SVG */
+  height: 20px;
+}
+h1 {
+  text-align: left;
+  margin-left: 20px;
+  color: white;
+}
+.vaga {
+  background-color: white;
+  padding: 1px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+.vaga:hover:not(.aberta) {
+  transform: scale(1.02);
+}
+.vaga.aberta {
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 1rem;
+  text-align: left;
+}
+/*DESCRIÇÃO*/
+.box-descricao {
+  background-color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+.box-descricao-text {
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+hr {
+  border: 1px solid #b1b1b194;
+  margin: 0rem 0;
+  margin-top: -1px;
+  width: 100%;
+}
+.status-andamento-ab {
+  color: rgb(1, 187, 51);
+  font-weight: bold;
+}
+.status-andamento-ng {
+  color: rgb(187, 1, 1);
+  font-weight: bold;
+}
+.status-andamento-fn {
+  color: rgb(1, 57, 187);
+  font-weight: bold;
+}
+.resultado {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.resultado button {
+  background-color: #dadada;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  border: none;
+  width: 130px; /* Define uma largura fixa para o botão */
+  margin: 1px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.resultado button:hover {
+  background-color: #fcfb30;
+}

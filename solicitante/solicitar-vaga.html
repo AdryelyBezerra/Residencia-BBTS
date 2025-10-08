@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar vaga</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logoPeq.png" />
+    <!--Favicon-->
+    <link rel="stylesheet" href="/css/styles-globais.css" />
+    <!--CSS GLOBAL-->
+    <link rel="stylesheet" href="/css/solicitar-vaga.css" />
+    <!--CSS SOLICITAR VAGA-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="/js/scripts-globais.js"></script>
+    <script src="/js/solicitar-vaga.js"></script>
+</head>
+<body>
+    <!--NAVBAR-->
+    <div id="navbar-solicitante"></div>
+  <!--SOLICITAR VAGA-->
+            <form action="/submit-vaga" method="post">
+                
+                <!-- Informações da Vaga -->
+                <fieldset>
+                    <legend>Informações da Vaga</legend>
+    
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="nome-cargo">Nome do Cargo:</label>
+                            <input type="text" id="nome-cargo" name="nome-cargo" placeholder="Ex: Scrum Master" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="num-vagas">Número de vagas:</label>
+                            <input type="number" id="num-vagas" name="num-vagas" min="1" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="modalidade-trabalho">Modalidade de Trabalho:</label>
+                            <select id="modalidade-trabalho" name="modalidade-trabalho" required>
+                                <option value="">Selecione</option>
+                                    <optgroup label="Híbrido">
+                                        <option value="integral-híbrido">Integral</option>
+                                        <option value="meio-periodo-híbrido">Meio Período</option>
+                                        <option value="contrato-temporario-híbrido">Contrato Temporário</option>
+                                        <option value="estagio-híbrido">Estágio</option>
+                                    </optgroup>
+                                    <optgroup label="Presencial">
+                                        <option value="integral-presencial">Integral</option>
+                                        <option value="meio-periodo-presencial">Meio Período</option>
+                                        <option value="contrato-temporario-presencial">Contrato Temporário</option>
+                                        <option value="estagio-presencial">Estágio</option>
+                                    </optgroup>
+                                    <optgroup label="À Distância">
+                                        <option value="integral-distancia">Integral</option>
+                                        <option value="meio-periodo-distancia">Meio Período</option>
+                                        <option value="contrato-temporario-distancia">Contrato Temporário</option>
+                                        <option value="estagio-distancia">Estágio</option>
+                                    </optgroup>
+                            </select>
+                    </div>
+                </div>
+    
+                
+                    <div class="form-group">
+                        <label>Habilidades Técnicas:</label><br>
+                        <div id="container-habilidades-tecnicas" class="form-horizontal"></div>
+                        <span class="material-symbols-outlined" id="add-habilidade-tecnica">add</span>
+                    </div>
+            
+    
+                    <div class="form-group">
+                        <label>Habilidades Interpessoais:</label><br>
+                        <div id="container-habilidades-inter" class="form-horizontal"></div>
+                        <span class="material-symbols-outlined" id="add-habilidade-inter">add</span>
+                    </div>
+                </fieldset>
+    
+                <!-- Formação Acadêmica -->
+                <fieldset>
+                   <legend>Diplomas</legend>
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="diploma">Diploma:</label>
+                                    <select id="diploma" name="diploma">
+                                        <option value="">Selecione</option>
+                                            <optgroup label="Graduação">
+                                                <option value="bacharelado">Bacharelado</option>
+                                                <option value="licenciatura">Licenciatura</option>
+                                                <option value="tecnologo">Tecnólogo</option>
+                                            </optgroup>
+                                            <optgroup label="Pós-Graduação">
+                                                <option value="mestrado">Mestrado</option>
+                                                <option value="doutorado">Doutorado</option>
+                                            </optgroup>
+                                    </select>
+                            </div>
+
+                        <div class="form-group">
+                            <label for="area-estudo">Área de estudo:</label>
+                            <input type="text" id="area-estudo" name="area-estudo" placeholder="Ex: Ciência da Computação" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="certificacao">Certificação:</label>
+                        <input type="text" id="certificacao" name="certificacao" placeholder="Ex: PMP Profissional de Gerenciamento" required>
+                    </div> 
+                    <!-- Adicionar interatividade para criar mais um campo Formação ao clicar no icone "mais" -->
+                </fieldset>
+                <!-- Idiomas -->
+                <fieldset>
+                    <legend>Idiomas</legend>
+    
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="idiomas">Idioma:</label>
+                            <input type="text" id="idiomas" name="idiomas" placeholder="Ex: Inglês">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="nivel-idioma">Nível:</label>
+                            <select id="nivel-idioma" name="nivel-idioma">
+                                <option value="">Selecione</option>
+                                <option value="basico">Básico</option>
+                                <option value="intermediario">Intermediário</option>
+                                <option value="avancado">Avançado</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Adicionar interatividade para criar mais um campo Idioma ao clicar no icone "mais" -->
+                </fieldset>
+    
+                <!-- Experiência Profissional -->
+                <fieldset>
+                    <legend>Experiência Profissional</legend>
+    
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="empresas">Empresa (atual ou anterior): </label>
+                            <input type="text" id="empresas" name="empresas" placeholder="Ex: XYZ">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="nivel-experiencia">Nível de Experiência:</label>
+                            <select id="nivel-experiencia" name="nivel-experiencia">
+                                <option value="">Selecione</option>
+                                <option value="junior">Júnior</option>
+                                <option value="pleno">Pleno</option>
+                                <option value="senior">Sênior</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <!-- Adicionar interatividade para criar mais um campo Empresa ao clicar no icone "mais" -->
+                </fieldset>
+    
+                <!-- Localização -->
+                <fieldset>
+                    <legend>Localização</legend>
+    
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="pais">País:</label>
+                            <input type="text" id="pais" name="pais" placeholder="Ex: Brasil">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <input type="text" id="estado" name="estado" placeholder="Ex: Ceará">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Ex: Fortaleza">
+                        </div>
+                    </div>
+    
+                </fieldset>
+    
+                <!-- Detalhes da Solicitação -->
+                <fieldset>
+                    <legend>Detalhes da Solicitação</legend>
+    
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="prioridade-vaga">Prioridade da Vaga:</label>
+                            <select id="prioridade-vaga" name="prioridade-vaga" required>
+                                <option value="">Selecione</option>
+                                <option value="baixa">Baixa</option>
+                                <option value="media">Média</option>
+                                <option value="alta">Alta</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="observacao">Observação:</label>
+                            <input type="text" id="observacao" name="observacao"></input>
+                        </div>
+                    </div>
+    
+                </fieldset>
+    
+                <button type="submit" class="cria-vaga">Criar vaga</button>
+            </form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/*ESTILOS GLOBAIS*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+}
+/*NAVBAR SOLICITANTE E ADMIN*/
+.navbar-solicitante,
+.navbar-admin {
+  background-color: #465eff;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-solicitante .nav-right,
+.navbar-admin .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar-solicitante .links,
+.navbar-admin .links {
+  display: flex;
+  gap: 16px;
+}
+.navbar-solicitante a,
+.navbar-admin a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.navbar-solicitante a:hover,
+.navbar-admin a:hover {
+  text-decoration: underline;
+}
+.navbar-solicitante .user-icon,
+.navbar-admin .user-icon {
+  flex: 1;
+  display: flex;
+  font-size: 24px;
+  cursor: pointer;
+}
+.navbar-solicitante .user-icon:hover,
+.navbar-admin .user-icon:hover {
+  opacity: 0.8;
+}
+.navbar-solicitante .user-icon .material-symbols-outlined {
+  color: #fff !important;
+}
+.navbar-solicitante .user-menu,
+.navbar-admin .user-menu {
+  position: relative;
+}
+.navbar-solicitante .dropdown-menu,
+.navbar-admin .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f2f2f2;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: none;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.navbar-solicitante .logout-btn,
+.navbar-admin .logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+.navbar-solicitante .logout-btn:hover,
+.navbar-admin .logout-btn:hover {
+  background-color: #c0392b;
+}

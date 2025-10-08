@@ -1,0 +1,95 @@
+/*ESTILOS SOLICITAR VAGA*/
+h1 {
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+.cria-vaga {
+  float: right;
+  background-color: #465eff;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 40px;
+  margin-top: 8px;
+  margin-right: 20px;
+  padding: 10px;
+  margin-bottom: 20 px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.cria-vaga:hover {
+  background-color: #17a01b;
+  transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+}
+.form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  flex: 1;
+}
+fieldset {
+  margin: 1rem; /* Adiciona margem ao redor de cada fieldset */
+  padding: 1rem; /* Adiciona preenchimento interno ao fieldset */
+  border: 1px solid #cdcdcd; /* Adiciona uma borda para delimitar o grupo */
+  background-color: #ededed; /* Adiciona um fundo sutil para destacar o grupo */
+  border-radius: 5px;
+}
+legend {
+  padding: 0 0.5rem; /* Adiciona um pequeno preenchimento ao redor da legenda */
+  font-weight: bold; /* Deixa a legenda em negrito */
+  color: #333; /* Define a cor da legenda */
+}
+.form-horizontal {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.material-symbols-outlined {
+  cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
+  font-size: 20px; /* Ajusta o tamanho do ícone */
+  margin-right: 4px; /* Adiciona uma margem direita para espaçamento */
+  vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
+}
+.material-symbols-outlined:hover {
+  color: #006cd0; /* Muda a cor do ícone ao passar o mouse */
+  transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.input-wrapper input {
+  padding: 4px;
+  width: 110px;
+  background-color: #b9e0ff;
+  border: 1px solid #006cd0;
+  border-radius: 30px 0 0 30px;
+  margin-right: 0;
+}
+.input-wrapper button {
+  background-color: #b9e0ff;
+  border: 1px solid #006cd0;
+  padding: 0px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  display: flex; /* Garante que o ícone e o texto (se houver) estejam alinhados */
+  align-items: center;
+  justify-content: center; /* Centraliza o ícone dentro do botão */
+  min-width: unset; /* Impede que o botão tenha largura mínima */
+}
+.input-wrapper button:hover {
+  background-color: #d32f2f;
+  border: none;
+}
+.input-wrapper .remove-btn {
+  /* Garante que o ícone tenha a cor correta e tamanho */
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: auto;
+}
